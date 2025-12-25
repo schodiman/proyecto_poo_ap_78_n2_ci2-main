@@ -52,8 +52,9 @@ def menu_api():
     print()
     print('Menú API')
     print('============')
-    print('[1] Obtener Usuarios => GET.')
-    print('[2] Crear Usuario => POST.')
-    print('[3] Modificar Usuario => PUT.')
-    print('[4] Eliminar Usuario => DELETE.')
+    print('[1] Obtener photos => GET.')
+    print('[2] Crear photo => POST.')
+    print('[3] Modificar photo => PUT.')
+    print('[4] Eliminar photo => DELETE.')
     print('[0] Volver al menú principal.')
+    

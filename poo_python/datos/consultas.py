@@ -60,3 +60,25 @@ def pasajero_delete():
         DELETE FROM pasajeros
         WHERE id_pasajero=%s"""
     return consulta
+
+
+def consulta_nombre_pasajero(campos, tabla):
+    if campos != "" and tabla != "":
+        consulta = f"SELECT {campos} FROM {tabla} WHERE nombre_pasajero LIKE CONCAT('%', %s, '%')"
+        return consulta
+    
+def avion_update():
+    consulta = f"""
+        UPDATE aviones SET 
+        cod_avion=%s,
+        tipo_avion=%s,
+        capacidad_avion=%s,
+        id_aerolinea=%s
+        WHERE id_avion=%s"""
+    return consulta
+
+def consulta_delete(tabla, campo):
+    consulta = f"""
+        DELETE FROM {tabla}
+        WHERE {campo}=%s"""
+    return consulta

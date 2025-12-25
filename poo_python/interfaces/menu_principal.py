@@ -3,8 +3,9 @@ from negocio.negocio_aerolineas import obtener_datos_aerolineas,crear_aerolinea,
 from negocio.negocio_aviones import obtener_datos_aviones
 from negocio.negocio_pasajeros import obtener_datos_pasajeros, crear_pasajero,modificar_pasajero
 from negocio.negocio_usuarios import crear_usuario,login
-from servicios.jsonplaceholder import obtener_users_api,crear_user_api,actualizar_user_api,eliminar_user_api
-from auxiliares.data_api import url_users
+from servicios.jsonplaceholder import obtener_photos_api, crear_photo_api, actualizar_photo_api, eliminar_photo_api
+from auxiliares.data_api import url_photos
+
 
 def menu_principal():
     while True:
@@ -152,13 +153,13 @@ def menu_aplicacion():
                 menu_api()
                 opcion_api = input('Seleccione su opción [0-4]: ')
                 if opcion_api == '1':
-                    obtener_users_api(url_users)
+                    obtener_photos_api(url_photos)
                 elif opcion_api == '2':
-                    crear_user_api(url_users)
+                    crear_photo_api(url_photos)
                 elif opcion_api == '3':
-                    actualizar_user_api(url_users)
+                    actualizar_photo_api(url_photos)
                 elif opcion_api == '4':
-                    eliminar_user_api(url_users)
+                    eliminar_photo_api(url_photos)
                 elif opcion_api == '0':
                     print('Volviendo al menú principal...')
                     break
